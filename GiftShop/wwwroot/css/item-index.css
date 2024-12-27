@@ -1,0 +1,77 @@
+﻿body {
+    /*background-image: url('/backgorund imgs/bg3.jpg');*/
+    background: white;*
+    /*background-image: url('/backgorund imgs/double-bubble-dark.png');*/
+}
+
+.item-header {
+    font-family: 'Berlin Sans FB';
+    color: black;
+}
+
+.item-filter {
+    color: rgb(46, 46, 31);
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+    .item-filter:hover {
+        color: white;
+        background-color: rgb(46, 46, 31);
+        border-color: white;
+    }
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-tile {
+    background-color: white;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px 5px darkgrey;
+}
+
+    .item-tile:hover {
+        transform-origin: center;
+        transform: scale(1.02);
+        box-shadow: 0px 0px 10px 5px #4c4c34;
+    }
+
+    .item-tile:hover, .item-tile-text h2 {
+        font-weight: bold;
+    }
+
+    .item-tile img {
+        border-radius: 8px 8px 0px 0px;
+        width: 250px;
+        height: 200px;
+    }
+
+.item-tile-text {
+    padding: 0px 10px;
+}
+
+    .item-tile-text div p:first-child {
+        padding: 0px;
+        margin: 0px;
+        font-size: 15px;
+    }
+
+.item-tile-footer{
+    text-align: center;
+}
+.item-add {
+    background-color: #cc0000;
+}
+
+    .item-add:hover {
+        background-color: rgb(179, 0, 0);
+    }
+
+.item-detail:hover {
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,30 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Delete Category";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Delete Category - @Model.CategoryName</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div>
+                        <p class="fs-4">Are you sure you want to delete the category: <b>@Model.CategoryName </b> ?</p>
+                    </div>
+                    <div class="form-group">
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="Id" />
+                            <input type="submit" value="Confirm" class="btn btn-danger float-right" />
+                        </form>
+                        <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

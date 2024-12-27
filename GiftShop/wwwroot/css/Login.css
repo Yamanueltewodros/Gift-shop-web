@@ -1,0 +1,49 @@
+﻿body {
+}
+
+.login-body {
+    display: flex;
+    box-shadow: 1px 2px 20px grey;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    padding: 0px 0px 0px 50px;
+    border-radius: 10px;
+}
+
+.login-container1 {
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    font-family: 'Berlin Sans FB';
+}
+
+    .login-container1 h1 {
+        margin-top: 30px;
+    }
+
+    .login-container1 img {
+        width: 300px;
+        margin-top: 80px;
+    }
+
+.login-container2 {
+    margin: auto;
+    padding: 30px 20px;
+    width: 60%;
+    font-family: 'Berlin Sans FB';
+    font-size: 1.2em;
+}
+
+.login-header {
+    text-align: center;
+}
+
+    .login-header img {
+        width: 150px;
+    }
+
+.login-input {
+    border: none;
+    border-bottom: 2px solid black;
+}

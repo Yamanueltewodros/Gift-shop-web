@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Item>
+
+@{
+    ViewData["Title"] = "Items List";
+}
+
+<style>
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="header item-header">
+    <h1>Items List</h1>
+    <form asp-action="Filter" method="post">
+        <span class="d-flex" style="width: 250px; align-items: baseline;">
+            <select name="categoryId" id="filter" class="form-control d-inline" asp-items="ViewBag.Categories">
+                <option value="0">All</option>
+            </select>
+            <button class="btn my-2 my-sm-0 item-filter" type="submit" style="margin-left: 20px;">Filter</button>
+        </span>
+    </form>
+</div>
+
+<div class="item-list">
+    @foreach (var item in Model)
+    {
+
+        <div class="item-tile">
+            <a class="item-detail" asp-action="Details" asp-route-id="@item.Id">
+                <img src="@item.ImageURL" alt="Alternate Text" />
+
+                <div class="item-tile-text text-dark">
+                    <h4 style="max-width: 230px; text-decoration: underline;">@item.ItemName</h4>
+                    <div class="text-dark">
+                        <p>@item.Description</p>
+                        <p style="@((item.AvailabilityStatus == "In Stock") ? "color: green;" : "color: red;") font-size: 13px;">@item.AvailabilityStatus</p>
+                    </div>
+                </div>
+            </a>
+            <div>
+                <div class="card-footer">
+                    <p class="card-text item-tile-footer">
+                        <a class="btn item-add text-white @((!User.Identity.IsAuthenticated || item.AvailabilityStatus != "In Stock") ? "disabled" : "" )" asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@item.Id">Add to Cart (@item.Price.ToString("c"))</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <div style="margin-bottom: 50px; margin-right: 40px;" class="fixed-bottom text-right">
+        <a class="btn-add-item btn btn-success text-white" asp-controller="Items" asp-action="Create">+ Add</a>
+    </div>
+}
+

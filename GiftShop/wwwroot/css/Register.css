@@ -1,0 +1,36 @@
+﻿body {
+}
+
+.register-container1 {
+    width: 50%;
+    margin: auto;
+    box-shadow: 2px 3px 20px grey;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Berlin Sans FB';
+}
+
+.register-container1 .header{
+    text-align: center;
+}
+
+.register-container1 img{
+    width: 150px;
+    margin: auto;
+}
+
+.register-container1 hr{
+    width: 80%;
+    color: black;
+    border-top: 2px double black;
+}
+
+.register-container1 form{
+    padding: 25px;
+    margin: auto;
+    width: 70%;
+}
+.reg-input{
+    border: none;
+    border-bottom: 1px solid grey;
+}

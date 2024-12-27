@@ -1,0 +1,55 @@
+﻿@model Item
+
+@{
+    ViewData["Title"] = "Update Item";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Update Details of @Model.ItemName</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="ItemName" class="control-label"></label>
+                        <input asp-for="ItemName" class="form-control" />
+                        <span asp-validation-for="ItemName" class="text-danger"></span>
+
+                        <label asp-for="ImageURL" class="control-label"></label>
+                        <input asp-for="ImageURL" class="form-control" />
+                        <span asp-validation-for="ImageURL" class="text-danger"></span>
+
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+
+                        <label asp-for="AvailabilityStatus" class="control-label"></label>
+                        <select asp-for="AvailabilityStatus" class="form-control">
+                            <option value="In Stock">In stock</option>
+                            <option value="Out of Stock">Out of stock</option>
+                        </select>
+                        <span asp-validation-for="AvailabilityStatus" class="text-danger"></span>
+
+                        <label asp-for="CategoryId" class="control-label"></label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"> </select>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+
+                        <label asp-for="Description" class="control-label"></label>
+                        <textarea asp-for="Description" class="form-control"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>

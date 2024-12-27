@@ -1,0 +1,47 @@
+﻿@using GiftShop.Data.ViewModels
+@model LoginVM;
+
+@{
+    ViewData["Title"] = "Log into your account";
+}
+
+
+@if (TempData["Error"] != null)
+{
+    <div class="col-md-12 alert alert-danger">
+        <span><b>Sorry!</b> - @TempData["Error"]</span>
+    </div>
+}
+<div class="login-body">
+    <div class="login-container1">
+        <img src="~/svgs/gift.svg" />
+        <h1>Gifts.com</h1>
+    </div>
+    <div class="login-container2">
+        <div class="login-header">
+            <img src="~/svgs/gift 2.svg" />
+            <h2>Welcome Back</h2>
+        </div>
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control login-input" placeholder="Enter your Email Address" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control login-input" placeholder="Enter your Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input class="btn btn-outline-success float-right" type="submit" value="Log In" />
+                <a class="btn btn-outline-secondary" asp-controller="Items" asp-action="Index">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+</div>
