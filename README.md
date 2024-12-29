@@ -20,7 +20,8 @@ The project follows the Model-View-Controller (MVC) design pattern. Below is an 
 
 ## Installation
 
-To run this project locally, follow these steps:
+
+
 
 1. **Clone the repository**:
     ```bash
