@@ -12,6 +12,7 @@ The project follows the Model-View-Controller (MVC) design pattern. Below is an 
 
 ## Features
 
+
 - User Authentication and Authorization
 - Shopping Cart Management
 - Order Processing
