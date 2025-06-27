@@ -2,7 +2,6 @@
 
 GiftShop is an e-commerce web application built using ASP.NET Core MVC. It allows users to browse and purchase various gift items. The application includes features such as user authentication, shopping cart management, order processing, and administrative functionalities for managing items and categories.
 
-
 ## Project Structure
 
 The project follows the Model-View-Controller (MVC) design pattern. Below is an overview of the main components:
