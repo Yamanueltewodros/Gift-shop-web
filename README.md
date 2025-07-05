@@ -7,6 +7,7 @@ GiftShop is an e-commerce web application built using ASP.NET Core MVC. It allow
 The project follows the Model-View-Controller (MVC) design pattern. Below is an overview of the main components:
 
 
+
 - **Models**: Define the data structure and business logic.
 - **Views**: Handle the presentation layer and user interface.
 - **Controllers**: Manage user input and interactions, updating the model and returning the appropriate view.
