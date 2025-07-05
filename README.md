@@ -22,7 +22,6 @@ The project follows the Model-View-Controller (MVC) design pattern. Below is an 
 ## Installation
 
 
-
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/million-mesfin/GiftShop.git
